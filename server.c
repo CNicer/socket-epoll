@@ -78,7 +78,7 @@ int main()
 				int c = events[i].data.fd;
 				char buf[128] = {0};
 				int res = recv(c,buf,128,0);
-				if(res == -1)
+				if(res == -1||res == 0)
 					delfd(epfd,c);
 				else
 				{
