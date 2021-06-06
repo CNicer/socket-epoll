@@ -6,6 +6,8 @@ int main()
 {
 	pid_t pid;
 	pid = fork();
+	if(pid > 0)
+		eixt(0);
 	if(pid == 0)
 	{
 		int sid = setsid();
